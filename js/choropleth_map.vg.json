@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Natural Disasters per 10,000 square kilometre by State",
+  "title": "Australian Natural Disasters per 10,000 square kilometres by State (Historical)",
   "width": 800,
   "height": 500,
   "data": {
@@ -31,12 +31,12 @@
             "fields": ["Disasters","Area"]
           }
         },
-        {"calculate": "datum.Disasters/datum.Area * 10000", "as": "Natural Disasters per 10,000 square kilometres"}
+        {"calculate": "datum.Disasters/datum.Area * 10000", "as": "Natural Disasters per 10,000 km²"}
       ],
       "mark": {"type": "geoshape", "stroke": "white"},
       "encoding": {
         "color": {
-          "field": "Natural Disasters per 10,000 square kilometres",
+          "field": "Natural Disasters per 10,000 km²",
           "type": "quantitative",
           "scale": {
             "type": "threshold",
@@ -46,7 +46,7 @@
         },
         "tooltip": [
           {"field": "properties.STE_NAME21", "type": "nominal", "title": "State"},
-          {"field": "Natural Disasters per 10,000 square kilometres", "type": "quantitative", "format": ".2f"}
+          {"field": "Natural Disasters per 10,000 km²", "type": "quantitative", "format": ".2f"}
         ]
       }
     },

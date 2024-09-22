@@ -1,7 +1,13 @@
 #disaster_map {
-	top:100px;
+	top:0px;
 	bottom: 100px; 
-	left: 100px;
+	left: -1000px;
 	right: 100px;
 	/*height: 1000px;
 	width: 800px*/}
+
+body {
+	overflow-x: hidden; /* Hide horizontal scrolling */
+	overflow-y: hidden; /* Hide horizontal scrolling */
+
+}
